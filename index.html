@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Decluttering with Val | Premium Home Organization in California</title>
+    <meta name="description" content="Elevate your living space with 'Decluttering with Val'. High-end home organization, closet makeovers, and decluttering services in NORCAL and SOCAL.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="css/styles.css">
+
+    <style>
+      /* ---- Location Ticker ---- */
+      .ticker {
+        background-color: var(--color-primary);
+        color: rgba(255,255,255,0.85);
+        padding: 0.6rem 0;
+        font-size: 0.65rem;
+        font-weight: 500;
+        text-transform: uppercase;
+        letter-spacing: 0.2em;
+        text-align: center;
+        font-family: var(--font-body);
+      }
+
+      /* ---- Hero ---- */
+      .hero {
+        min-height: 100vh;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        position: relative;
+        background-color: var(--color-bg);
+      }
+
+      .hero-text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: var(--space-xl) var(--space-lg);
+        padding-top: calc(var(--space-xl) + 3rem);
+        position: relative;
+        z-index: 2;
+      }
+
+      .hero h1 {
+        margin-bottom: var(--space-md);
+        line-height: 0.95;
+      }
+
+      .hero h1 em {
+        font-style: italic;
+        color: var(--color-accent);
+      }
+
+      .hero-body {
+        max-width: 400px;
+        color: var(--color-text-muted);
+        margin-bottom: var(--space-md);
+        line-height: 1.8;
+      }
+
+      .hero-image {
+        position: relative;
+        overflow: hidden;
+      }
+
+      .hero-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      /* Diagonal overlay on image edge */
+      .hero-image::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -1px;
+        width: 80px;
+        height: 100%;
+        background: linear-gradient(to right, var(--color-bg) 0%, transparent 100%);
+        z-index: 1;
+      }
+
+      .hero-actions {
+        display: flex;
+        gap: var(--space-sm);
+        align-items: center;
+      }
+
+      /* ---- Services Grid ---- */
+      .services-section {
+        background-color: var(--color-surface);
+        position: relative;
+      }
+
+      /* Decorative top border */
+      .services-section::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 1px;
+        height: 60px;
+        background-color: var(--color-border);
+      }
+
+      .service-card {
+        padding: var(--space-lg) var(--space-md);
+        border-left: 1px solid var(--color-border);
+        transition: all var(--transition-speed);
+        position: relative;
+      }
+
+      .service-card:first-child {
+        border-left: none;
+      }
+
+      .service-card::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: var(--space-md);
+        right: var(--space-md);
+        height: 2px;
+        background-color: var(--color-accent);
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      }
+
+      .service-card:hover::after {
+        transform: scaleX(1);
+      }
+
+      .service-number {
+        font-family: var(--font-display);
+        font-size: 3rem;
+        font-weight: 300;
+        color: var(--color-border);
+        line-height: 1;
+        margin-bottom: var(--space-sm);
+      }
+
+      .service-card h3 {
+        font-size: 1.3rem;
+        margin-bottom: var(--space-sm);
+      }
+
+      .service-card p {
+        color: var(--color-text-muted);
+        font-size: 0.88rem;
+        line-height: 1.7;
+      }
+
+      /* ---- About Teaser ---- */
+      .about-teaser {
+        background-color: var(--color-primary);
+        color: white;
+        overflow: hidden;
+      }
+
+      .about-teaser-grid {
+        display: grid;
+        grid-template-columns: 1.2fr 1fr;
+        gap: 0;
+        min-height: 600px;
+      }
+
+      .about-teaser-image {
+        position: relative;
+        overflow: hidden;
+      }
+
+      .about-teaser-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+      }
+
+      .about-teaser-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: var(--space-xl) var(--space-lg);
+      }
+
+      .about-teaser-content h2 {
+        color: white;
+        margin-bottom: var(--space-md);
+      }
+
+      .about-teaser-content p {
+        color: rgba(255,255,255,0.8);
+        margin-bottom: var(--space-md);
+        line-height: 1.8;
+        max-width: 400px;
+      }
+
+      .about-teaser-content .btn {
+        align-self: flex-start;
+      }
+
+      /* ---- Pull Quote ---- */
+      .pull-quote {
+        padding: var(--space-xl) 0;
+        text-align: center;
+        background-color: var(--color-bg);
+        position: relative;
+      }
+
+      .pull-quote blockquote {
+        font-family: var(--font-display);
+        font-size: clamp(1.5rem, 3vw, 2.5rem);
+        font-weight: 300;
+        font-style: italic;
+        line-height: 1.4;
+        color: var(--color-text-main);
+        max-width: 700px;
+        margin: 0 auto;
+      }
+
+      .pull-quote cite {
+        display: block;
+        font-style: normal;
+        font-family: var(--font-body);
+        font-size: 0.7rem;
+        text-transform: uppercase;
+        letter-spacing: 0.2em;
+        color: var(--color-accent);
+        margin-top: var(--space-sm);
+      }
+
+      /* ---- Responsive ---- */
+      @media (max-width: 768px) {
+        .hero {
+          grid-template-columns: 1fr;
+          min-height: auto;
+        }
+        .hero-text {
+          padding: calc(var(--space-xl) + 2rem) var(--space-md) var(--space-lg);
+        }
+        .hero-image {
+          height: 50vh;
+        }
+        .hero-image::before { display: none; }
+
+        .service-card {
+          border-left: none;
+          border-top: 1px solid var(--color-border);
+          padding: var(--space-md);
+        }
+        .service-card:first-child { border-top: none; }
+
+        .about-teaser-grid {
+          grid-template-columns: 1fr;
+        }
+        .about-teaser-image { height: 400px; }
+        .about-teaser-content {
+          padding: var(--space-lg) var(--space-md);
+        }
+      }
+    </style>
+</head>
+<body>
+
+    <!-- Location Ticker -->
+    <div class="ticker">
+        Now accepting new clients &mdash; Northern &amp; Southern California
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container flex justify-between items-center">
+            <a href="index.html" class="logo">Decluttering with Val</a>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <button class="mobile-menu-btn" aria-label="Menu">&#9776;</button>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <header class="hero">
+        <div class="hero-text">
+            <span class="label reveal">Premium Home Organization</span>
+            <h1 class="reveal" data-delay="1">Reclaim<br>your <em>space.</em></h1>
+            <p class="hero-body reveal" data-delay="2">
+                Bespoke decluttering and organization systems designed for the modern luxury lifestyle. We transform overwhelm into serenity.
+            </p>
+            <div class="hero-actions reveal" data-delay="3">
+                <a href="contact.html" class="btn btn-primary">Book a Consultation</a>
+                <a href="services.html" class="btn btn-outline">Our Services</a>
+            </div>
+        </div>
+        <div class="hero-image">
+            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=2670&auto=format&fit=crop" alt="Calm minimal interior">
+        </div>
+    </header>
+
+    <!-- Services Overview -->
+    <section class="section services-section">
+        <div class="container">
+            <div class="text-center mb-lg" style="padding-top: var(--space-md);">
+                <span class="label reveal">What We Do</span>
+                <h2 class="reveal" data-delay="1">Our Expertise</h2>
+            </div>
+
+            <div class="grid grid-cols-3">
+                <div class="service-card reveal" data-delay="1">
+                    <div class="service-number">01</div>
+                    <h3>Whole Home Transformation</h3>
+                    <p>A comprehensive refresh of your entire property, installing intuitive systems that maintain themselves long after we leave.</p>
+                </div>
+                <div class="service-card reveal" data-delay="2">
+                    <div class="service-number">02</div>
+                    <h3>Targeted Room Clearing</h3>
+                    <p>Turn that overwhelming "clutter room" into a functional, breathable sanctuary. Rapid visual transformation with lasting results.</p>
+                </div>
+                <div class="service-card reveal" data-delay="3">
+                    <div class="service-number">03</div>
+                    <h3>Closet Makeovers</h3>
+                    <p>Boutique-style wardrobe organization that makes getting dressed feel like shopping in your own personal atelier.</p>
+                </div>
+            </div>
+
+            <div class="text-center reveal" style="margin-top: var(--space-lg);">
+                <a href="services.html" class="btn btn-outline">View Details &amp; Process</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pull Quote -->
+    <section class="pull-quote">
+        <div class="container reveal">
+            <hr class="rule rule--center">
+            <blockquote>
+                &ldquo;When your home is clear, your mind is clear.&rdquo;
+            </blockquote>
+            <cite>Valerie, Founder</cite>
+        </div>
+    </section>
+
+    <!-- About Teaser -->
+    <section class="about-teaser">
+        <div class="about-teaser-grid">
+            <div class="about-teaser-image img-reveal reveal-left">
+                <img src="Photos/Val/val-portrait-direct-02.jpg" alt="Valerie - Founder">
+            </div>
+            <div class="about-teaser-content reveal-right">
+                <span class="label" style="color: var(--color-accent-light);">The Founder</span>
+                <h2>Meet Val.</h2>
+                <p>
+                    I believe that your external environment deeply impacts your internal state. With an eye for design and a passion for creating peaceful environments, I help busy professionals transform their homes from chaotic to calm.
+                </p>
+                <a href="about.html" class="btn" style="background: white; color: var(--color-primary);">Read My Story</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="flex justify-between items-center" style="flex-wrap: wrap; gap: var(--space-md);">
+                <div>
+                    <div class="footer-brand">Decluttering with Val</div>
+                    <p>Serving Northern &amp; Southern California</p>
+                </div>
+                <div class="footer-links">
+                    <a href="index.html">Home</a>
+                    <a href="about.html">About</a>
+                    <a href="services.html">Services</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+                <div>
+                    <a href="contact.html" class="btn btn-accent" style="padding: 0.7rem 1.5rem;">Request Quote</a>
+                </div>
+            </div>
+            <hr class="footer-rule">
+            <p>&copy; 2026 Decluttering with Val. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

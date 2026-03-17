@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Val | Book a Consultation</title>
+    <meta name="description" content="Request a custom quote and book a consultation with Valerie for premium decluttering and home organization in California.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="css/styles.css">
+
+    <style>
+      .page-header {
+        padding-top: 160px;
+        padding-bottom: var(--space-md);
+        background-color: var(--color-bg);
+      }
+
+      .page-header-sub {
+        color: var(--color-text-muted);
+        max-width: 480px;
+        font-size: 1rem;
+        line-height: 1.8;
+      }
+
+      /* ---- Contact Layout ---- */
+      .contact-layout {
+        display: grid;
+        grid-template-columns: 1fr 1.4fr;
+        gap: 0;
+        margin-top: var(--space-md);
+        margin-bottom: var(--space-xl);
+        border-radius: var(--border-radius);
+        overflow: hidden;
+        box-shadow: 0 20px 60px rgba(0,0,0,0.06);
+      }
+
+      /* ---- Info Panel ---- */
+      .contact-info {
+        background-color: var(--color-primary);
+        color: white;
+        padding: var(--space-lg);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        position: relative;
+        overflow: hidden;
+      }
+
+      /* Subtle diagonal pattern */
+      .contact-info::before {
+        content: '';
+        position: absolute;
+        top: 0; left: 0;
+        width: 100%; height: 100%;
+        background: repeating-linear-gradient(
+          -45deg,
+          transparent,
+          transparent 30px,
+          rgba(255,255,255,0.02) 30px,
+          rgba(255,255,255,0.02) 31px
+        );
+        pointer-events: none;
+      }
+
+      .contact-info > * {
+        position: relative;
+        z-index: 1;
+      }
+
+      .contact-info .label {
+        color: var(--color-accent-light);
+      }
+
+      .contact-info h3 {
+        color: white;
+        font-size: 1.6rem;
+        margin-bottom: var(--space-sm);
+      }
+
+      .contact-info p {
+        color: rgba(255,255,255,0.75);
+        font-size: 0.9rem;
+        line-height: 1.8;
+        margin-bottom: var(--space-md);
+      }
+
+      .contact-info-item {
+        border-top: 1px solid rgba(255,255,255,0.1);
+        padding-top: var(--space-sm);
+        margin-top: var(--space-sm);
+      }
+
+      .contact-info-item .label {
+        margin-bottom: 0.3rem;
+      }
+
+      .contact-info-email {
+        font-family: var(--font-display);
+        font-size: 1.15rem;
+        color: white;
+        text-decoration: underline;
+        text-underline-offset: 3px;
+        text-decoration-color: rgba(255,255,255,0.3);
+        transition: text-decoration-color var(--transition-speed);
+      }
+
+      .contact-info-email:hover {
+        text-decoration-color: white;
+      }
+
+      /* ---- Form Panel ---- */
+      .contact-form {
+        background-color: var(--color-surface);
+        padding: var(--space-lg);
+      }
+
+      .contact-form h3 {
+        margin-bottom: var(--space-md);
+      }
+
+      .form-row {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: var(--space-sm);
+      }
+
+      .form-group {
+        margin-bottom: 1.5rem;
+      }
+
+      .form-group label {
+        display: block;
+        margin-bottom: 0.4rem;
+        font-weight: 500;
+        color: var(--color-text-main);
+        font-size: 0.7rem;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+      }
+
+      .form-control {
+        width: 100%;
+        padding: 0.75rem 0;
+        border: none;
+        border-bottom: 1px solid var(--color-border);
+        border-radius: 0;
+        font-family: var(--font-body);
+        font-size: 0.95rem;
+        transition: border-color var(--transition-speed);
+        background-color: transparent;
+        color: var(--color-text-main);
+      }
+
+      .form-control:focus {
+        outline: none;
+        border-bottom-color: var(--color-accent);
+      }
+
+      .form-control::placeholder {
+        color: var(--color-border);
+      }
+
+      select.form-control {
+        cursor: pointer;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath d='M2 4l4 4 4-4' fill='none' stroke='%237A756E' stroke-width='1.5'/%3E%3C/svg%3E");
+        background-repeat: no-repeat;
+        background-position: right 0 center;
+        padding-right: 1.5rem;
+      }
+
+      textarea.form-control {
+        resize: vertical;
+        min-height: 100px;
+      }
+
+      .form-submit {
+        margin-top: var(--space-sm);
+      }
+
+      .form-submit .btn {
+        width: 100%;
+      }
+
+      .form-note {
+        text-align: center;
+        font-size: 0.75rem;
+        color: var(--color-text-muted);
+        margin-top: var(--space-sm);
+      }
+
+      /* ---- Responsive ---- */
+      @media (max-width: 768px) {
+        .contact-layout {
+          grid-template-columns: 1fr;
+        }
+        .form-row {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar scrolled">
+        <div class="container flex justify-between items-center">
+            <a href="index.html" class="logo">Decluttering with Val</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+            </ul>
+            <button class="mobile-menu-btn" aria-label="Menu">&#9776;</button>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="page-header">
+        <div class="container">
+            <span class="label reveal">Get in Touch</span>
+            <h1 class="reveal" data-delay="1">Let's Begin.</h1>
+            <p class="page-header-sub reveal" data-delay="2">
+                Take the first step towards a calmer, beautifully ordered home.
+            </p>
+        </div>
+    </header>
+
+    <!-- Contact Layout -->
+    <main class="container">
+        <div class="contact-layout reveal">
+
+            <!-- Info Panel -->
+            <div class="contact-info">
+                <div>
+                    <span class="label">The Initial Consultation</span>
+                    <h3>Every project starts with a conversation.</h3>
+                    <p>
+                        We'll discuss your goals, the scope of work, timeline expectations, and custom pricing. No obligation, no pressure.
+                    </p>
+                </div>
+
+                <div>
+                    <div class="contact-info-item">
+                        <span class="label">Service Areas</span>
+                        <p style="margin-bottom: 0;">
+                            Northern California<br>
+                            Southern California
+                        </p>
+                    </div>
+
+                    <div class="contact-info-item">
+                        <span class="label">Direct Inquiries</span>
+                        <a href="mailto:hello@declutteringwithval.com" class="contact-info-email">hello@declutteringwithval.com</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contact Form -->
+            <div class="contact-form">
+                <h3>Inquiry Form</h3>
+                <form action="#" method="POST" onsubmit="event.preventDefault(); alert('Thank you! This form is currently in demo mode.');">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="firstName">First Name</label>
+                            <input type="text" id="firstName" class="form-control" required placeholder="Jane">
+                        </div>
+                        <div class="form-group">
+                            <label for="lastName">Last Name</label>
+                            <input type="text" id="lastName" class="form-control" required placeholder="Doe">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" class="form-control" required placeholder="jane@example.com">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="location">City &amp; Zip Code</label>
+                        <input type="text" id="location" class="form-control" required placeholder="Beverly Hills, 90210">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="service">Service of Interest</label>
+                        <select id="service" class="form-control">
+                            <option>Whole Home Transformation</option>
+                            <option>Targeted Room Clearing</option>
+                            <option>Boutique Closet Makeover</option>
+                            <option>Unsure / Need Recommendation</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="details">Project Details</label>
+                        <textarea id="details" class="form-control" placeholder="Describe the spaces you'd like to transform..."></textarea>
+                    </div>
+
+                    <div class="form-submit">
+                        <button type="submit" class="btn btn-primary">Submit Inquiry</button>
+                    </div>
+                    <p class="form-note">
+                        We aim to respond within 48 hours.
+                    </p>
+                </form>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="flex justify-between items-center" style="flex-wrap: wrap; gap: var(--space-md);">
+                <div>
+                    <div class="footer-brand">Decluttering with Val</div>
+                    <p>Serving Northern &amp; Southern California</p>
+                </div>
+                <div class="footer-links">
+                    <a href="index.html">Home</a>
+                    <a href="about.html">About</a>
+                    <a href="services.html">Services</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+            </div>
+            <hr class="footer-rule">
+            <p>&copy; 2026 Decluttering with Val. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

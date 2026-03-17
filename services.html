@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services | Decluttering with Val</title>
+    <meta name="description" content="Explore luxury decluttering services including Whole Home Transformation, Targeted Room Clearing, and Boutique Closet Makeovers.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="css/styles.css">
+
+    <style>
+      .page-header {
+        padding-top: 160px;
+        padding-bottom: var(--space-lg);
+        background-color: var(--color-bg);
+      }
+
+      .page-header-sub {
+        color: var(--color-text-muted);
+        max-width: 520px;
+        font-size: 1rem;
+        line-height: 1.8;
+      }
+
+      /* ---- Service Detail ---- */
+      .service-detail {
+        padding: var(--space-xl) 0;
+        position: relative;
+      }
+
+      .service-detail + .service-detail {
+        border-top: 1px solid var(--color-border);
+      }
+
+      .service-detail-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: var(--space-lg);
+        align-items: center;
+      }
+
+      .service-detail-grid.flip {
+        direction: rtl;
+      }
+      .service-detail-grid.flip > * {
+        direction: ltr;
+      }
+
+      .service-detail-number {
+        font-family: var(--font-display);
+        font-size: 5rem;
+        font-weight: 300;
+        color: var(--color-border);
+        line-height: 1;
+        margin-bottom: var(--space-sm);
+        letter-spacing: -0.05em;
+      }
+
+      .service-detail-text h2 {
+        margin-bottom: var(--space-sm);
+      }
+
+      .service-detail-text p {
+        color: var(--color-text-muted);
+        line-height: 1.8;
+        margin-bottom: var(--space-md);
+      }
+
+      .service-features {
+        list-style: none;
+        padding: 0;
+        margin-bottom: var(--space-md);
+      }
+
+      .service-features li {
+        padding: 0.6rem 0;
+        border-bottom: 1px solid var(--color-border);
+        font-size: 0.9rem;
+        color: var(--color-text-main);
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+      }
+
+      .service-features li:last-child {
+        border-bottom: none;
+      }
+
+      .feature-dash {
+        width: 16px;
+        height: 1px;
+        background-color: var(--color-accent);
+        flex-shrink: 0;
+      }
+
+      .service-price {
+        font-family: var(--font-body);
+        font-weight: 500;
+        font-size: 0.75rem;
+        text-transform: uppercase;
+        letter-spacing: 0.15em;
+        color: var(--color-accent);
+      }
+
+      .service-detail .img-reveal img {
+        width: 100%;
+        height: auto;
+        border-radius: var(--border-radius);
+      }
+
+      /* ---- Process Section ---- */
+      .process-section {
+        background-color: var(--color-dark);
+        color: white;
+        position: relative;
+        overflow: hidden;
+      }
+
+      /* Diagonal line pattern */
+      .process-section::before {
+        content: '';
+        position: absolute;
+        top: 0; left: 0;
+        width: 100%; height: 100%;
+        background: repeating-linear-gradient(
+          -45deg,
+          transparent,
+          transparent 40px,
+          rgba(255,255,255,0.015) 40px,
+          rgba(255,255,255,0.015) 41px
+        );
+        pointer-events: none;
+      }
+
+      .process-section h2 {
+        color: white;
+        text-align: center;
+        margin-bottom: var(--space-lg);
+        position: relative;
+        z-index: 1;
+      }
+
+      .process-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 0;
+        position: relative;
+        z-index: 1;
+      }
+
+      .process-step {
+        padding: var(--space-lg) var(--space-md);
+        border-left: 1px solid rgba(255,255,255,0.08);
+        text-align: left;
+      }
+
+      .process-step:first-child {
+        border-left: none;
+      }
+
+      .process-step-number {
+        font-family: var(--font-display);
+        font-size: 3.5rem;
+        font-weight: 300;
+        color: var(--color-accent);
+        line-height: 1;
+        margin-bottom: var(--space-sm);
+      }
+
+      .process-step h3 {
+        color: white;
+        font-size: 1.3rem;
+        margin-bottom: var(--space-sm);
+      }
+
+      .process-step p {
+        color: rgba(255,255,255,0.55);
+        font-size: 0.88rem;
+        line-height: 1.7;
+      }
+
+      .process-cta {
+        text-align: center;
+        margin-top: var(--space-lg);
+        position: relative;
+        z-index: 1;
+      }
+
+      /* ---- Responsive ---- */
+      @media (max-width: 768px) {
+        .service-detail-grid {
+          grid-template-columns: 1fr;
+        }
+        .service-detail-grid.flip {
+          direction: ltr;
+        }
+        .process-grid {
+          grid-template-columns: 1fr;
+        }
+        .process-step {
+          border-left: none;
+          border-top: 1px solid rgba(255,255,255,0.08);
+          padding: var(--space-md);
+        }
+        .process-step:first-child { border-top: none; }
+      }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar scrolled">
+        <div class="container flex justify-between items-center">
+            <a href="index.html" class="logo">Decluttering with Val</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html" class="active">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <button class="mobile-menu-btn" aria-label="Menu">&#9776;</button>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="page-header">
+        <div class="container">
+            <span class="label reveal">Our Offerings</span>
+            <h1 class="reveal" data-delay="1">Curated<br>Organization</h1>
+            <p class="page-header-sub reveal" data-delay="2">
+                Bespoke systems designed for high-end lifestyles. We serve clients across Northern and Southern California.
+            </p>
+        </div>
+    </header>
+
+    <!-- Services -->
+    <main class="container">
+
+        <!-- Service 1 -->
+        <section class="service-detail">
+            <div class="service-detail-grid">
+                <div class="img-reveal reveal-left">
+                    <img src="https://images.unsplash.com/photo-1593696140826-c58b021acf8b?q=80&w=2670&auto=format&fit=crop" alt="Whole Home Organization">
+                </div>
+                <div class="service-detail-text reveal-right">
+                    <div class="service-detail-number">01</div>
+                    <h2>Whole Home Transformation</h2>
+                    <hr class="rule">
+                    <p>
+                        Our most comprehensive offering. We analyze your entire property to create holistic, flowing systems of organization. From the kitchen pantry to the garage, every space is purposefully designated and styled.
+                    </p>
+                    <ul class="service-features">
+                        <li><span class="feature-dash"></span>Complete home assessment</li>
+                        <li><span class="feature-dash"></span>Custom system design and implementation</li>
+                        <li><span class="feature-dash"></span>Sourcing of premium organizational materials</li>
+                        <li><span class="feature-dash"></span>Coordinating donation or luxury consignment</li>
+                    </ul>
+                    <span class="service-price">Custom quote</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Service 2 -->
+        <section class="service-detail">
+            <div class="service-detail-grid flip">
+                <div class="img-reveal reveal-right">
+                    <img src="https://images.unsplash.com/photo-1598928506311-c55d43f12711?q=80&w=2670&auto=format&fit=crop" alt="Targeted Room Clearing">
+                </div>
+                <div class="service-detail-text reveal-left">
+                    <div class="service-detail-number">02</div>
+                    <h2>Targeted Room Clearing</h2>
+                    <hr class="rule">
+                    <p>
+                        Everyone has <em>that</em> room. A spare bedroom turned storage, a chaotic playroom, or a home office overflowing with paperwork. We clear the noise so you can reclaim the square footage.
+                    </p>
+                    <ul class="service-features">
+                        <li><span class="feature-dash"></span>Intensive decluttering sessions</li>
+                        <li><span class="feature-dash"></span>Rapid visual transformation</li>
+                        <li><span class="feature-dash"></span>Creating a maintainable baseline</li>
+                    </ul>
+                    <span class="service-price">Custom quote</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Service 3 -->
+        <section class="service-detail">
+            <div class="service-detail-grid">
+                <div class="img-reveal reveal-left">
+                    <img src="https://images.unsplash.com/photo-1558997519-83ea9252edf8?q=80&w=2670&auto=format&fit=crop" alt="Closet Makeovers">
+                </div>
+                <div class="service-detail-text reveal-right">
+                    <div class="service-detail-number">03</div>
+                    <h2>Boutique Closet Makeovers</h2>
+                    <hr class="rule">
+                    <p>
+                        Experience the feeling of shopping in your own home. We transform your wardrobe into a high-end boutique display, making getting ready the most serene part of your day.
+                    </p>
+                    <ul class="service-features">
+                        <li><span class="feature-dash"></span>Wardrobe editing and curation</li>
+                        <li><span class="feature-dash"></span>Uniform hanger replacement and visual merchandising</li>
+                        <li><span class="feature-dash"></span>Custom shelving and accessory displays</li>
+                    </ul>
+                    <span class="service-price">Custom quote</span>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- The Process -->
+    <section class="section process-section">
+        <div class="container">
+            <span class="label reveal" style="text-align: center; display: block; color: var(--color-accent-light);">How It Works</span>
+            <h2 class="reveal" data-delay="1">The Signature Process</h2>
+            <div class="process-grid">
+                <div class="process-step reveal" data-delay="1">
+                    <div class="process-step-number">01</div>
+                    <h3>Consultation</h3>
+                    <p>
+                        We begin with a complimentary virtual or in-person walk-through to understand your goals, lifestyle, and pain points.
+                    </p>
+                </div>
+                <div class="process-step reveal" data-delay="2">
+                    <div class="process-step-number">02</div>
+                    <h3>Custom Proposal</h3>
+                    <p>
+                        You'll receive a detailed project scope, timeline, and custom quote tailored to your exact needs. Absolutely no hidden fees.
+                    </p>
+                </div>
+                <div class="process-step reveal" data-delay="3">
+                    <div class="process-step-number">03</div>
+                    <h3>Transformation</h3>
+                    <p>
+                        Our team manages everything from sorting to hauling away donations. You just relax and return to an immaculate space.
+                    </p>
+                </div>
+            </div>
+            <div class="process-cta reveal">
+                <a href="contact.html" class="btn btn-outline" style="border-color: rgba(255,255,255,0.3); color: white;">Request Your Quote</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="flex justify-between items-center" style="flex-wrap: wrap; gap: var(--space-md);">
+                <div>
+                    <div class="footer-brand">Decluttering with Val</div>
+                    <p>Serving Northern &amp; Southern California</p>
+                </div>
+                <div class="footer-links">
+                    <a href="index.html">Home</a>
+                    <a href="about.html">About</a>
+                    <a href="services.html">Services</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+            </div>
+            <hr class="footer-rule">
+            <p>&copy; 2026 Decluttering with Val. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

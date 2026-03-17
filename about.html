@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Val | Decluttering with Val</title>
+    <meta name="description" content="Learn more about Valerie and her approach to premium, zen-inspired home organization and decluttering across California.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="css/styles.css">
+
+    <style>
+      /* ---- Page Header ---- */
+      .page-header {
+        padding-top: 160px;
+        padding-bottom: var(--space-lg);
+        background-color: var(--color-bg);
+      }
+
+      .page-header h1 {
+        margin-bottom: var(--space-xs);
+      }
+
+      .page-header-sub {
+        color: var(--color-text-muted);
+        max-width: 500px;
+        font-size: 1rem;
+        line-height: 1.8;
+      }
+
+      /* ---- Editorial Blocks ---- */
+      .editorial-block {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: var(--space-xl);
+        align-items: center;
+        margin-bottom: var(--space-xl);
+      }
+
+      .editorial-block.flip {
+        direction: rtl;
+      }
+      .editorial-block.flip > * {
+        direction: ltr;
+      }
+
+      .editorial-block .img-reveal {
+        border-radius: var(--border-radius);
+      }
+
+      .editorial-block .img-reveal img {
+        width: 100%;
+        height: auto;
+        border-radius: var(--border-radius);
+      }
+
+      .editorial-text h2 {
+        margin-top: var(--space-xs);
+      }
+
+      .editorial-text p {
+        color: var(--color-text-muted);
+        line-height: 1.9;
+        margin-bottom: var(--space-sm);
+      }
+
+      /* ---- Quote Banner ---- */
+      .quote-banner {
+        background-color: var(--color-primary);
+        padding: var(--space-xl) var(--space-md);
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+      }
+
+      /* Subtle pattern overlay */
+      .quote-banner::before {
+        content: '';
+        position: absolute;
+        top: 0; left: 0;
+        width: 100%; height: 100%;
+        background: repeating-linear-gradient(
+          45deg,
+          transparent,
+          transparent 30px,
+          rgba(255,255,255,0.015) 30px,
+          rgba(255,255,255,0.015) 31px
+        );
+        pointer-events: none;
+      }
+
+      .quote-banner blockquote {
+        font-family: var(--font-display);
+        font-size: clamp(1.4rem, 3vw, 2.2rem);
+        font-weight: 300;
+        font-style: italic;
+        line-height: 1.5;
+        color: white;
+        max-width: 650px;
+        margin: 0 auto;
+        position: relative;
+        z-index: 1;
+      }
+
+      .quote-banner cite {
+        display: block;
+        font-style: normal;
+        font-family: var(--font-body);
+        font-size: 0.7rem;
+        text-transform: uppercase;
+        letter-spacing: 0.2em;
+        color: rgba(255,255,255,0.6);
+        margin-top: var(--space-sm);
+        position: relative;
+        z-index: 1;
+      }
+
+      /* ---- CTA Section ---- */
+      .cta-section {
+        text-align: center;
+        padding: var(--space-xl) 0;
+        background-color: var(--color-bg);
+        position: relative;
+      }
+
+      .cta-section h2 {
+        margin-bottom: var(--space-md);
+      }
+
+      /* ---- Responsive ---- */
+      @media (max-width: 768px) {
+        .editorial-block {
+          grid-template-columns: 1fr;
+          gap: var(--space-md);
+        }
+        .editorial-block.flip {
+          direction: ltr;
+        }
+      }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar scrolled">
+        <div class="container flex justify-between items-center">
+            <a href="index.html" class="logo">Decluttering with Val</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html" class="active">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <button class="mobile-menu-btn" aria-label="Menu">&#9776;</button>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="page-header">
+        <div class="container">
+            <span class="label reveal">The Story</span>
+            <h1 class="reveal" data-delay="1">Meet Val</h1>
+            <p class="page-header-sub reveal" data-delay="2">
+                Transforming chaotic spaces into serene sanctuaries since 2018.
+            </p>
+        </div>
+    </header>
+
+    <!-- Story Content -->
+    <section class="section container">
+
+        <!-- Block 1 -->
+        <div class="editorial-block">
+            <div class="img-reveal reveal-left">
+                <img src="Photos/Val/val-portrait.jpg" alt="Valerie Portrait">
+            </div>
+            <div class="editorial-text reveal-right">
+                <span class="label">The Journey</span>
+                <h2>From Chaos<br>to Calm</h2>
+                <hr class="rule">
+                <p>
+                    My approach goes beyond simply throwing things away. It's about fundamentally changing how you interact with your environment. I started this business because I saw how deeply our physical spaces mirror our mental state.
+                </p>
+                <p>
+                    When your home is crowded, your mind is clouded. I bring a sense of Zen, mixed with an energetic, system-oriented process, to help you reclaim your space and your peace.
+                </p>
+            </div>
+        </div>
+
+        <!-- Block 2 -->
+        <div class="editorial-block flip">
+            <div class="img-reveal reveal-right">
+                <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=2670&auto=format&fit=crop" alt="Organized Space">
+            </div>
+            <div class="editorial-text reveal-left">
+                <span class="label">The Philosophy</span>
+                <h2>Luxury is<br>Breathability</h2>
+                <hr class="rule">
+                <p>
+                    My clientele consists of high-achieving individuals who value their time above all else. You don't have the hours to sort through years of accumulated items&mdash;that's what I'm here for.
+                </p>
+                <p>
+                    I design bespoke organization systems that fit seamlessly into your lifestyle, so your home remains effortlessly beautiful and impeccably organized long after I leave.
+                </p>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Quote -->
+    <section class="quote-banner">
+        <div class="container reveal">
+            <blockquote>
+                &ldquo;Your home should be your ultimate retreat. Let's curate a space that supports your highest self.&rdquo;
+            </blockquote>
+            <cite>&mdash; Valerie</cite>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section">
+        <div class="container reveal">
+            <span class="label">Take the First Step</span>
+            <h2>Ready to transform<br>your home?</h2>
+            <a href="contact.html" class="btn btn-primary">Book a Consultation</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="flex justify-between items-center" style="flex-wrap: wrap; gap: var(--space-md);">
+                <div>
+                    <div class="footer-brand">Decluttering with Val</div>
+                    <p>Serving Northern &amp; Southern California</p>
+                </div>
+                <div class="footer-links">
+                    <a href="index.html">Home</a>
+                    <a href="about.html">About</a>
+                    <a href="services.html">Services</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+            </div>
+            <hr class="footer-rule">
+            <p>&copy; 2026 Decluttering with Val. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
