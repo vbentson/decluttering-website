@@ -12,8 +12,7 @@ You won't need to learn how to code. You just describe what you want in plain En
 |------|-------------|
 | **VS Code** | A free app where you view and edit your website files |
 | **Claude Code** | An AI assistant that lives inside VS Code and makes changes for you |
-| **Node.js** | A behind-the-scenes tool that Claude Code needs to run |
-| **Git** | Saves snapshots of your work and syncs it to the internet |
+| **Git** | Saves snapshots of your work and syncs it to the internet (Claude Code will install this for you if needed) |
 
 ---
 
@@ -26,16 +25,7 @@ You won't need to learn how to code. You just describe what you want in plain En
 
 ---
 
-## Step 2: Install Node.js
-
-1. Go to **https://nodejs.org**
-2. Click the green button that says **LTS** (this is the stable version)
-3. Open the downloaded file and follow the installer steps — just keep clicking "Continue" / "Next"
-4. When it's done, restart VS Code if it's open
-
----
-
-## Step 3: Install Claude Code in VS Code
+## Step 2: Install Claude Code in VS Code
 
 1. Open **VS Code**
 2. Click the **Extensions** icon on the left sidebar (it looks like four small squares)
@@ -48,7 +38,7 @@ You won't need to learn how to code. You just describe what you want in plain En
 
 ---
 
-## Step 4: Get Your Website Files
+## Step 3: Get Your Website Files
 
 1. Open **VS Code**
 2. Open the Claude Code panel (click the Claude icon in the left sidebar)
@@ -62,7 +52,7 @@ Claude will download all your website files and open them for you.
 
 ---
 
-## Step 5: See Your Website Locally
+## Step 4: See Your Website Locally
 
 Once your files are open in VS Code, tell Claude:
 
