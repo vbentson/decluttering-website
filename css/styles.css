@@ -1,17 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap');
 
 :root {
-  /* Color Palette — Warm earth + deep green */
-  --color-bg: #F5F0EB;           /* Warm parchment cream */
-  --color-surface: #FFFFFF;
-  --color-primary: #2C3E2D;      /* Deep forest green */
-  --color-primary-light: #4A6B4C;
-  --color-accent: #C4764A;        /* Warm terracotta/clay */
-  --color-accent-light: #D4956A;
-  --color-text-main: #1A1A18;     /* Near-black warm */
-  --color-text-muted: #7A756E;    /* Warm gray */
-  --color-border: #D8D2CA;        /* Warm border */
-  --color-dark: #1A1A18;
+  /* Color Palette — 5 PM California light / warm coral + gold */
+  --color-bg: #F5EEE0;           /* Warm peachy ivory */
+  --color-surface: #FDF8F2;      /* Soft warm white */
+  --color-primary: #E07858;      /* Soft coral — main action */
+  --color-primary-light: #E8906E;
+  --color-accent: #C4962A;        /* Golden amber */
+  --color-accent-light: #D4AA50;
+  --color-text-main: #1E1A14;     /* Warm charcoal */
+  --color-text-muted: #A0705A;    /* Muted clay */
+  --color-border: #E0CFC0;        /* Warm border */
+  --color-dark: #1E1A14;          /* Warm charcoal — footer & dark anchors */
 
   /* Typography — Distinctive pairing */
   --font-display: 'Cormorant Garamond', 'Georgia', serif;
@@ -211,7 +211,7 @@ img {
 .btn-primary:hover {
   background-color: var(--color-primary-light);
   transform: translateY(-1px);
-  box-shadow: 0 8px 24px rgba(44, 62, 45, 0.15);
+  box-shadow: 0 8px 24px rgba(224, 120, 88, 0.2);
 }
 
 .btn-outline {
@@ -249,7 +249,7 @@ img {
 }
 
 .navbar.scrolled {
-  background-color: rgba(245, 240, 235, 0.92);
+  background-color: rgba(245, 238, 224, 0.92);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   padding: 0.8rem 0;
@@ -484,7 +484,7 @@ img {
     top: 100%;
     left: 0;
     width: 100%;
-    background-color: rgba(245, 240, 235, 0.98);
+    background-color: rgba(245, 238, 224, 0.98);
     backdrop-filter: blur(12px);
     padding: var(--space-md);
     gap: var(--space-sm);
