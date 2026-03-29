@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Grounded Space Co. | Home Organization in California</title>
-    <meta name="description" content="Grounded Space Co. — premium home organization, closet makeovers, and decluttering services across Northern and Southern California.">
+    <title>Grounded Space Co. | Home Organization in the San Francisco Bay Area</title>
+    <meta name="description" content="Grounded Space Co. — premium home organization, closet makeovers, and decluttering services in the San Francisco Bay Area.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="css/styles.css">
@@ -323,61 +323,7 @@
       .contact-form-panel {
         background-color: var(--color-surface);
         padding: var(--space-md);
-      }
-
-      .contact-form-panel h3 { margin-bottom: var(--space-sm); font-size: 1.3rem; }
-
-      .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-sm); }
-
-      .form-group { margin-bottom: 0.9rem; }
-
-      .form-group label {
-        display: block;
-        margin-bottom: 0.4rem;
-        font-weight: 500;
-        color: var(--color-text-main);
-        font-size: 0.7rem;
-        text-transform: uppercase;
-        letter-spacing: 0.1em;
-      }
-
-      .form-control {
-        width: 100%;
-        padding: 0.5rem 0;
-        border: none;
-        border-bottom: 1px solid var(--color-border);
-        border-radius: 0;
-        font-family: var(--font-body);
-        font-size: 0.95rem;
-        background-color: transparent;
-        color: var(--color-text-main);
-        transition: border-color var(--transition-speed);
-      }
-
-      .form-control:focus {
-        outline: none;
-        border-bottom-color: var(--color-primary);
-      }
-
-      .form-control::placeholder { color: var(--color-border); }
-
-      select.form-control {
-        cursor: pointer;
-        -webkit-appearance: none;
-        appearance: none;
-        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath d='M2 4l4 4 4-4' fill='none' stroke='%23A0705A' stroke-width='1.5'/%3E%3C/svg%3E");
-        background-repeat: no-repeat;
-        background-position: right 0 center;
-        padding-right: 1.5rem;
-      }
-
-      textarea.form-control { resize: vertical; min-height: 70px; }
-
-      .form-note {
-        text-align: center;
-        font-size: 0.75rem;
-        color: var(--color-text-muted);
-        margin-top: var(--space-sm);
+        min-height: 0;
       }
 
       /* ---- Footer ---- */
@@ -405,7 +351,6 @@
         .process-step:first-child { border-top: none; }
 
         .contact-layout { grid-template-columns: 1fr; }
-        .form-row { grid-template-columns: 1fr; }
       }
     </style>
 </head>
@@ -548,53 +493,27 @@
                     </div>
                     <div>
                         <div class="contact-info-item">
-                            <span class="label" style="color: rgba(255,255,255,0.55);">Service Areas</span>
-                            <p style="margin-bottom: 0;">Northern California<br>Southern California</p>
+                            <span class="label" style="color: rgba(255,255,255,0.55);">Service Area</span>
+                            <p style="margin-bottom: 0;">San Francisco Bay Area</p>
                         </div>
-                        <div class="contact-info-item">
-                            <span class="label" style="color: rgba(255,255,255,0.55);">Email</span>
-                            <a href="mailto:hello@declutteringwithval.com" class="contact-info-email">hello@declutteringwithval.com</a>
-                        </div>
+
                     </div>
                 </div>
 
                 <div class="contact-form-panel">
-                    <h3>Inquiry Form</h3>
-                    <form action="#" method="POST" onsubmit="event.preventDefault(); window.location.href='https://cal.com/val-bentson-y5qdmx/30min?overlayCalendar=true';">
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="firstName">First Name</label>
-                                <input type="text" id="firstName" class="form-control" required placeholder="Jane">
-                            </div>
-                            <div class="form-group">
-                                <label for="lastName">Last Name</label>
-                                <input type="text" id="lastName" class="form-control" required placeholder="Doe">
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Email</label>
-                            <input type="email" id="email" class="form-control" required placeholder="jane@example.com">
-                        </div>
-                        <div class="form-group">
-                            <label for="location">City &amp; Zip</label>
-                            <input type="text" id="location" class="form-control" placeholder="Beverly Hills, 90210">
-                        </div>
-                        <div class="form-group">
-                            <label for="service">Service of Interest</label>
-                            <select id="service" class="form-control">
-                                <option>Whole Home Transformation</option>
-                                <option>Targeted Room Clearing</option>
-                                <option>Boutique Closet Makeover</option>
-                                <option>Unsure / Need a Recommendation</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label for="details">Tell me about your space</label>
-                            <textarea id="details" class="form-control" placeholder="What would you like to transform?"></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary" style="width:100%;">Send Inquiry</button>
-                        <p class="form-note">We respond within 48 hours.</p>
-                    </form>
+                    <!-- Cal inline embed code begins -->
+                    <div style="width:100%;height:100%;overflow:scroll" id="my-cal-inline-30min"></div>
+                    <script type="text/javascript">
+                      (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if(typeof namespace === "string"){cal.ns[namespace] = cal.ns[namespace] || api;p(cal.ns[namespace], ar);p(cal, ["initNamespace", namespace]);} else p(cal, ar); return;} p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
+                      Cal("init", "30min", {origin:"https://app.cal.com"});
+                      Cal.ns["30min"]("inline", {
+                        elementOrSelector:"#my-cal-inline-30min",
+                        config: {"layout":"month_view","useSlotsViewOnSmallScreen":"true"},
+                        calLink: "val-bentson-y5qdmx/30min",
+                      });
+                      Cal.ns["30min"]("ui", {"hideEventTypeDetails":false,"layout":"month_view"});
+                    </script>
+                    <!-- Cal inline embed code ends -->
                 </div>
 
             </div>
@@ -607,7 +526,7 @@
             <div class="flex justify-between items-center" style="flex-wrap: wrap; gap: var(--space-md);">
                 <div>
                     <div class="footer-brand">Grounded Space Co.</div>
-                    <p>Serving Northern &amp; Southern California</p>
+                    <p>Serving the San Francisco Bay Area</p>
                 </div>
                 <div class="footer-links">
                     <a href="#services">Services</a>
